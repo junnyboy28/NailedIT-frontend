@@ -1,0 +1,99 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* NailedIT Design System with Blue and White Theme */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 20% 15%;
+
+    --primary: 207 90% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 20% 15%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 207 90% 35%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 207 90% 35%;
+
+    --radius: 0.5rem;
+
+    --nailedit-blue: 207 90% 35%;
+    --nailedit-blue-light: 207 90% 85%;
+    --nailedit-blue-dark: 207 90% 25%;
+  }
+
+  .dark {
+    --background: 215 20% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 20% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 20% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 207 90% 45%;
+    --primary-foreground: 215 20% 8%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 207 90% 45%;
+    --accent-foreground: 215 20% 8%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 207 90% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom NailedIT styles */
+.nailedit-gradient {
+  background: linear-gradient(135deg, hsl(var(--nailedit-blue)) 0%, hsl(var(--nailedit-blue-dark)) 100%);
+}
+
+.nailedit-hover-lift {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.nailedit-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -5px rgba(59, 130, 246, 0.15);
+}
