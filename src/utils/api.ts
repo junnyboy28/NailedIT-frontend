@@ -1,5 +1,5 @@
 // Update API configuration to support multiple backends
-const PRIMARY_API_URL = import.meta.env.VITE_API_URL || 'https://nailedit-backend.onrender.com';
+const PRIMARY_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 const SECONDARY_API_URL = import.meta.env.VITE_SECONDARY_API_URL || 'https://nailedit-backend-9rey.onrender.com';
 
 // Default backend to use - can be stored in localStorage to persist user preference
