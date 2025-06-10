@@ -71,15 +71,15 @@ const Navigation = () => {
               <DropdownMenuContent align="end">
                 <DropdownMenuItem 
                   onClick={() => handleBackendChange(false)}
-                  className={currentBackend.includes("http://localhost:8000") ? "bg-muted" : ""}
+                  className={currentBackend.includes("localhost:8000") ? "bg-muted" : ""}
                 >
-                  Primary Backend
+                  Local Backend (localhost)
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   onClick={() => handleBackendChange(true)}
                   className={currentBackend.includes("nailedit-backend-9rey.onrender.com") ? "bg-muted" : ""}
                 >
-                  Secondary Backend
+                  Remote Backend
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
